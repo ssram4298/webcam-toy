@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/ico" href="2.ico" sizes="48x48">
+    <title>Web Camera Toy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center title">Web Camera</h1>
+        <div class="top-container form-group">
+            <video id="video">Can't Take Photos Right Now, Sorry...</video>
+            <br>
+            <div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exampleModal" id="photo-btn">
+                    Take Photo
+                </button>
+                <!-- select filter list -->
+                <select name="filter" id="photo-filter" class="form-group form-control ">
+                    <option value="none">Normal</option>
+                    <option value="grayscale">Grayscale</option>
+                    <option value="sepia">Sepia</option>
+                    <option value="invert">Invert</option>
+                    <option value="hue-rotate">Hue</option>
+                    <option value="blur">Blur</option>
+                    <option value="contrast">Contrast</option>
+                </select>
+                <!-- slider bar -->
+                <div class="slidecontainer">
+                    <input type="range" min="" max="" value="" class="slider" id="myRange">
+                </div>
+                <!-- clear button -->
+                <button id="clear-btn" class="btn btn-primary btn-block">Clear</button>
+                <canvas id="canvas"></canvas>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" id='modalDialog' role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Your Photo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="photos">
+                            <!-- Some text or images here -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary" id="save-btn">Save changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

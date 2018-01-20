@@ -1,0 +1,48 @@
+body{
+background-image: url('1.jpeg');
+background-repeat: no-repeat;
+}
+.modal-body{
+    background-image: url('3.jpeg');
+}
+.title{
+    color: #bcfdff;
+}
+canvas {
+    display: none;
+}
+.top-container {
+   margin: 0 30%;
+   width: auto; 
+}
+#photo-filter{
+    margin-top: 16px;
+}
+#video {
+    margin: auto;
+}
+img{
+    margin: 0 15%;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: hsl(14, 100%, 62%);
+    outline: none;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background:hsl(197, 100%, 69%);
+    cursor: pointer;
+}
